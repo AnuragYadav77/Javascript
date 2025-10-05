@@ -1,3 +1,4 @@
+/*
 // let score="33";
 // console.log(typeof score);
 // console.log(typeof (score));
@@ -35,5 +36,27 @@ let a=2;
 let atostring = String(a)
 console.log(atostring)
 console.log(typeof atostring)
+*/
 
+// ***********************Operations*****************
+let value =3;
+let negValue = -value; //negation operation
+//console.log(negValue);
 
+let str1 = "Hello";
+let str2 = "World";
+let str3= str1+str2;
+// console.log(str3); //gives HelloWorld
+
+///////////////////////////////////////////////
+console.log("1"+2); //gives 32 //when string first, all others are treated as string
+console.log(1+"2"); //gives 12
+console.log("1"+2+2); //gives 122
+
+/////BUT//////
+console.log(1+2+"2"); //gives 32 // when number first, all others are treated as number till string comes
+///////////////////////////////////////////
+//some tricky conversions
+console.log(true); //gives 'true'
+console.log(+true); //gives 1.....similarly -ture gives -1
+console.log(+"") ; //gives 0
