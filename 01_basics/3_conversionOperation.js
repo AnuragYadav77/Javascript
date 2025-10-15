@@ -59,4 +59,4 @@ console.log(1+2+"2"); //gives 32 // when number first, all others are treated as
 //some tricky conversions
 console.log(true); //gives 'true'
 console.log(+true); //gives 1.....similarly -ture gives -1
-console.log(+"") ; //gives 0
+console.log(+"") ; //gives 0      
