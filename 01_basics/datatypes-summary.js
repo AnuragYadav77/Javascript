@@ -17,7 +17,7 @@
 
 const id=Symbol('123')
 const id2=Symbol('123') 
-console.log(id===id2)// gives 'false' even if the description/value inside both of them is same, it will create a new symbol
+// console.log(id===id2)// gives 'false' even if the description/value inside both of them is same, it will create a new symbol
 
 const bigNumber =123456787654323456765432n // 'n' at the end tells that it is a BigInt
 //OR
@@ -36,18 +36,50 @@ const bigNumber2 = BigInt(123456787654323456765432)
 //2. Objects
 //3. Functions 
 const heroes = ['shaktiman','naagraj','doga'] //Array
-console.log(typeof heroes) 
+// console.log(typeof heroes) 
 
 //object
 let myObj={
     name:"bruce",
     age:22,
 }
-console.log(typeof myObj) 
+// console.log(typeof myObj) 
 
 //function(it can also be treated like a variable in js)
 const myfunction =function(){
-    console.log("hello world")
+    // console.log("hello world")
 
 }
-console.log(typeof myfunction) 
+// console.log(typeof myfunction) 
+
+
+
+
+
+
+
+
+
+
+/********************MEMORY IN JS **********************/
+//Stack(used in primitive type)
+//Heap(used in non primitive type) - when we take refernce from heap, we don't get a copy, we get the original value.
+
+
+let myYouTubename="chaiandcode";
+let anothername=myYouTubename; // a new memory location is created in stack and the value is copied there
+// console.log(anothername);//chaiandcode
+anothername="codewithchai";
+console.log(myYouTubename)
+console.log(anothername)
+
+let userOne={
+    email:"user@gmail.com",
+    upi:"user@ybl"
+}
+
+let userTwo=userOne; 
+userTwo.email="bablu@googlemail.com"
+console.log(userOne.email) 
+console.log(userTwo.email) //both will reflect the change as both are referring to the same memory location in heap.
+
