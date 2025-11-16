@@ -176,5 +176,44 @@ const spliceArray=["Jan","March","April","June"];
 //slice()- The slice() method returns a 'shallow copy' of a portion of an array into a new array object selected from start to end (end not included).The original array will not be modified.
 const sliceArray=["Jan","Feb","March","April","May","June"];
 const newSliceArray=sliceArray.slice(1,4); //from index 1 to index 4(not included)
-console.log(newSliceArray); //["Feb", "March", "April"]
-console.log(sliceArray); //original array remains unchanged
+// console.log(newSliceArray); //["Feb", "March", "April"]
+// console.log(sliceArray); //original array remains unchanged
+
+
+
+
+/*+++++++++++++++++++++++++++++++ARRAY SEARCH METHODS++++++++++++++++++++++++++++++++++++*/
+
+//indexOf()- returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
+
+//lastIndexOf()- returns the last index at which a given element can be found in the array, or -1 if it is not present.
+
+//includes()-to check if an element is present in an array (including NaN, unlike indexOf)
+
+//find()- returns the value of the first element that passes a test function.
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+// console.log(first); //25
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+//findIndex()- returns the index of the first array element that passes a test function.
+const nums = [4, 9, 16, 25, 29];
+let result = numbers.findIndex(myFunction);
+// console.log(result); 
+function myFunction(x, index, array) {
+  return x > 18;
+}
+
+
+//findLast()- starts from the end of an array and returns the value of the first element that satisfies a condition.
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let high = temp.findLast(x => x > 40)
+// console.log(high); //42
+
+//findLastIndex()- starts from the end of an array and returns the index of the first element that satisfies a condition.
+const temperature = [27, 28, 30, 40, 42, 35, 30];
+let highIndex = temperature.findLastIndex(x => x > 40)
+console.log(highIndex); //4
