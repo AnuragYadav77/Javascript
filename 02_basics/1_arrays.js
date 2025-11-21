@@ -216,4 +216,61 @@ let high = temp.findLast(x => x > 40)
 //findLastIndex()- starts from the end of an array and returns the index of the first element that satisfies a condition.
 const temperature = [27, 28, 30, 40, 42, 35, 30];
 let highIndex = temperature.findLastIndex(x => x > 40)
-console.log(highIndex); //4
+// console.log(highIndex); //4
+
+
+
+/*++++++++++++++++++++++++ARRAY SORTING METHODS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+//sort()-sorts an array alphabetically.Sorts values as Stings.If numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+//sort() method will produce incorrect result when sorting numbers.
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(fruits3.sort());
+
+//reverse()-reverses the elements in an array.
+// console.log(fruits3.reverse());
+
+//toSorted()-The difference between the new toSorted() method and the old sort() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+// console.log(fruits3.toSorted());
+
+//toReversed()- {same as toSorted() and sort()}
+
+/////////NUMERIC SORT////////
+
+//By default, the sort() function sorts values as strings.If numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+//You can fix this by providing a compare function:function(a, b){return a - b}
+//When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.
+
+//If the result is negative, a is sorted before b.If the result is positive, b is sorted before a.If the result is 0, no changes are done with the sort order of the two values.
+
+const points = [40, 100, 1, 5, 25, 10];
+// console.log(points.sort(function(a, b){return a - b}));//ascending order
+
+// console.log(points.sort(function(a, b){return b - a})); //descending order
+
+//sorting array in random order
+// console.log(points.sort(function(a, b){return 0.5 - Math.random()}));
+//but this is not a reliable way to randomize an array.it favors some elements more than others.
+
+//A better way to randomize an array is to use the Fisher-Yates (aka Knuth) Method/Shuffle:
+
+
+//Math.min.apply()->to find the lowest number in an array.
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+// console.log(myArrayMin(points)); //1
+
+//Math.max.apply()->to find the highest number in an array.
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+// console.log(myArrayMax(points)); //100
+
+//SORTING OBJECT ARRAYS
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+console.log(cars.sort(function(a, b){return a.year - b.year}));
