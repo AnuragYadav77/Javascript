@@ -273,4 +273,14 @@ const cars = [
   {type:"Saab", year:2001},
   {type:"BMW", year:2010}
 ];
-console.log(cars.sort(function(a, b){return a.year - b.year}));
+// 
+
+
+////////JS Iteration Methods//////////
+
+//forEach()- calls a function once for each array element.
+cars.forEach(function(car){
+  // console.log(car.type);
+  // console.log(car.year);
+
+});
